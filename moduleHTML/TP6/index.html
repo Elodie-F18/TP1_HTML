@@ -1,0 +1,63 @@
+<!Doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire</title>
+</head>
+
+<body style="text-align: center">
+    <header>
+        <h1> Tableau </h1>
+        <h2>Ajouter un client</h2>
+    </header>
+
+    <main>
+
+        <form method="POST" name="form-example">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="lastname">Nom</label>
+                    <input type="text" class="form-control" id="lastname" placeholder="Nom">
+                    <label for="firstname">Prénom</label>
+                    <input type="text" class="form-control" id="firstname" placeholder="Prénom">
+
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+
+                    <label for="inputPassword4">Mot de passe</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Mot de passe">
+
+                    <br>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputState">Civilité</label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choisir</option>
+                                <option>Monsieur</option>
+                                <option>Madame</option>
+                                <option>Mademoiselle</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <br>
+                    
+                    <div>
+                        <input type="checkbox" id="tick_here" name="tick_here" checked>
+                        <label for="tick_here">Actif</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="check_it" name="check_it">
+                        <label for="check_it">Ou la</label>
+                    </div>
+        </form>
+
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
