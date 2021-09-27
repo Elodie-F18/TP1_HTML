@@ -12,88 +12,81 @@
     <h1>Votre formulaire d'inscription</h1>
     <form>
         <div class="form-row">
-            <fieldset>
-                <div class="form-group col-md-6">
-                    <label for="lastname">Nom</label>
-                    <input type="text" class="form-control" id="lastname" placeholder="Nom">
-                    <label for="firstname">Prénom</label>
-                    <input type="text" class="form-control" id="firstname" placeholder="Prénom">
-                    <div class="form-group">
-                        <label for="inputLieu">Lieu de naissance</label>
-                        <input type="text" class="form-control" id="inputLieu" placeholder="ex : 12 rue du Sacré Coeur">
-                        <label for="inputBirth">Date de naissance</label>
-                        <input type="date" id="inputBirth" name="birthday">
-                    </div>
-                </div>
-            </fieldset>
 
-            <fieldset>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="inputState">Pays d'origine</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choisir</option>
-                            <option>France</option>
-                            <option>Allemagne</option>
-                            <option>Italie</option>
-                            <option>Suisse</option>
-                            <option>Corée du Sud</option>
-                            <option>Japon</option>
-                            <option>Nouvelle-Zélande</option>
-                            <option>Islande</option>
-                        </select>
-                    </div>
+            <div class="form-group col-md-6">
+                <label for="lastname">Nom</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Votre nom">
+                <label for="firstname">Prénom</label>
+                <input type="text" class="form-control" id="firstname" placeholder="Votre prénom">
+                <div class="form-group">
+                    <label for="inputLieu">Lieu de naissance</label>
+                    <input type="text" class="form-control" id="inputLieu" placeholder="ex : 12 rue du Sacré Coeur">
+                    <label for="inputBirth">Date de naissance</label>
+                    <input type="date" id="inputBirth" name="birthday">
                 </div>
-            </fieldset>
+            </div>
 
-            <fieldset>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputState">Pays d'origine</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choisir</option>
+                        <option>France</option>
+                        <option>Allemagne</option>
+                        <option>Italie</option>
+                        <option>Suisse</option>
+                        <option>Corée du Sud</option>
+                        <option>Japon</option>
+                        <option>Nouvelle-Zélande</option>
+                        <option>Islande</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
                 <legend>Civilite</legend>
                 <label for="mme">Mme</label>
                 <input type="radio" name="name" id="mme">
                 <label for="mr">Mr</label>
                 <input type="radio" name="name" id="mr">
-            </fieldset>
+            </div>
 
-            <fieldset>
-                <div class="form-row">
-                    <label for="moyenneBac">Pourcentage ou moyenne obtenu au BAC</label>
-                    <input type="text" class="form-control" id="moyenneBac">
+
+            <div class="form-row">
+                <label for="moyenneBac">Pourcentage ou moyenne obtenu au BAC</label>
+                <input type="text" class="form-control" id="moyenneBac">
+            </div>
+
+
+            <div class="form-row">
+                <label for="formation">Inscrire le nom de votre formation</label>
+                <input type="text" class="form-control" id="formation">
+                <div class="form-group col-md-4">
+                    <label for="inputState">D'autres formation</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choisir</option>
+                        <option>Droit</option>
+                        <option>Art</option>
+                        <option>Histoire</option>
+                    </select>
                 </div>
-            </fieldset>
+            </div>
 
-            <fieldset>
-                <div class="form-row">
-                    <label for="formation">Inscrire le nom de votre formation</label>
-                    <input type="text" class="form-control" id="formation">
-                    <div class="form-group col-md-4">
-                        <label for="inputState">D'autres formation</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choisir</option>
-                            <option>BTS</option>
-                            <option>DUT</option>
-                            <option>Licence</option>
-                            <option>Licence Pro</option>
-                            <option>DU</option>
-                        </select>
-                    </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                 </div>
-            </fieldset>
+                <label for="phone">Numéro de téléphone</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            </div>
 
-            <fieldset>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                    </div>
-                    <label for="phone">Numéro de téléphone</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                </div>
-            </fieldset>
-
-            <fieldset>
+            <div>
                 <label for="letterMotivation">Votre lettre de motivation :</label>
                 <input type="file" id="letterMotivation" name="letterMotivation" accept=".doc,.docx">
-            </fieldset>
+            </div>
 
         </div>
     </form>
