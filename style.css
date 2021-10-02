@@ -1,0 +1,126 @@
+body {
+    color: #141414;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container-child {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+.container-child.header {
+    background: #F0FFFF;
+    border: 1px solid gray;
+    grid-auto-rows: 100px;
+    grid-template-areas:
+        "premier deuxieme troisieme quatrieme"
+}
+.header-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    margin: 10px 5px;
+    padding: 10px 0;
+}
+.header-child:nth-child(1) {
+    grid-area: premier;
+}
+.header-child:nth-child(2) {
+    grid-area: deuxieme;
+}
+.header-child:nth-child(3) {
+    grid-area: troisieme;
+}
+.header-child:nth-child(4) {
+    grid-area: quatrieme;
+}
+
+
+.container-child.body {
+    grid-auto-rows: 200px;
+    grid-template-areas:
+        "premier premier premier premier"
+        "deuxieme deuxieme deuxieme troisieme"
+        "deuxieme deuxieme deuxieme quatrieme"
+        "cinquieme cinquieme cinquieme cinquieme"
+}
+.body-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+}
+.body-child:nth-child(1) {
+    grid-area: premier;
+    background:#F8F8FF;
+}
+.body-child:nth-child(2) {
+    grid-area: deuxieme;
+    background:#F5FFFA;
+}
+.body-child:nth-child(3) {
+    grid-area: troisieme;
+    background:#F5FFFA;
+}
+.body-child:nth-child(4) {
+    grid-area: quatrieme;
+    background:#F5FFFA;
+}
+.body-child:nth-child(5) {
+    grid-area: cinquieme;
+    background:#F8F8FF;
+}
+
+
+/******************************************/
+/******************************************/
+/**************MEDIA QUERIES***************/
+/******************************************/
+/******************************************/
+
+@media screen and (max-width: 992px) {
+    .container-child.body {
+        grid-template-areas:  
+            "premier premier premier premier"
+            "deuxieme deuxieme troisieme troisieme"
+            "deuxieme deuxieme quatrieme quatrieme"
+            "cinquieme cinquieme cinquieme cinquieme"
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-child.header {
+        grid-template-areas:
+            "premier premier deuxieme deuxieme"
+            "troisieme troisieme quatrieme quatrieme"
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-child {
+        grid-template-columns: 1fr;
+    }
+    .container-child.header {
+        padding:10px 0;
+        grid-auto-rows: auto;
+        grid-template-areas:
+            "premier"
+            "deuxieme"
+            "troisieme"
+            "quatrieme"
+    }
+    .header-child {
+        margin: 0 5px;
+    }
+    .container-child.body {
+        grid-template-areas:  
+            "premier"
+            "deuxieme"
+            "troisieme"
+            "quatrieme"
+            "cinquieme"
+    }
+}
