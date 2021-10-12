@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP 23</title>
+</head>
+
+<body>
+    <main class="main">
+        <h1 class="main_title">JS TP23 : calculer les dimensions d'un cercle à l'aide du rayon</h1>
+        <div id="mainform">
+            <form id="caculator-form">
+                <div class="form-field">
+                    <label class="form-label" for="rayon">Rayon : </label>
+                    <input id="rayon" type="number" class="form-input" />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="diametre">Diamètre : </label>
+                    <input id="diametre" type="number" class="form-input" min="0" />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="circ">Circonférence : </label>
+                    <input disabled id="circ" type="number" class="form-input" min="0" />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label" for="aire">Aire : </label>
+                    <input disabled id="aire" type="number" class="form-input" />
+                </div>
+
+                <button id="btn-submit" type="submit" class="btn" href="#">
+                    Calculer
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
