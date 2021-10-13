@@ -74,12 +74,12 @@ SELECT * FROM avion WHERE capacite = (SELECT MIN(capacite) FROM avion);
 SELECT * FROM avion WHERE capacite > (SELECT avg(capacite) FROM avion);
 
 #Afficher le nom et l’adresse des pilotes assurant les vols IT100 et IT104
-
+SELECT pilotes.nom, pilotes.prenom, pilotes.adresse, vols.num_vol from pilotes JOIN vols ON pilotes.id = vols.id_pilote WHERE vols.num_vol = "IT100" OR vols.num_vol = "IT104";
 
 #Afficher les numéros des pilotes qui sont en service
-
+SELECT pilotes.nom, pilotes.prenom, pilotes.adresse, vols.num_vol from pilotes JOIN vols ON pilotes.id = vols.id_pilote WHERE ISNULL(vols.heure_arrivee) AND NOT ISNULL(vols.heure_depart);
 
 #Afficher les numéros des pilotes qui ne sont pas en service
-
+SELECT pilotes.nom, pilotes.prenom, pilotes.adresse, vols.num_vol from pilotes JOIN vols ON pilotes.id = vols.id_pilote WHERE (NOT ISNULL(vols.heure_arrivee) AND NOT ISNULL(vols.heure_depart)) OR (ISNULL(vols.heure_arrivee) AND ISNULL(vols.heure_depart));
 
 #Afficher les noms des pilotes qui conduisent un AIRBUS
